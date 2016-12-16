@@ -9,6 +9,8 @@
 import UIKit
 
 class SecondTableViewCell: UITableViewCell {
+    
+    var delegate: SecondCellProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()

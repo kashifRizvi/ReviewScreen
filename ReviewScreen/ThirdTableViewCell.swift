@@ -10,6 +10,8 @@ import UIKit
 
 class ThirdTableViewCell: UITableViewCell {
 
+    var delegate: ThirdCellProtocol?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

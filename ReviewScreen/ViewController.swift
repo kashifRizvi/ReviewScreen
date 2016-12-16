@@ -8,14 +8,7 @@
 
 import UIKit
 
-protocol currentCell {
-    func checkOneStar(cell: FirstTableViewCell)
-    func checkTwoStars(cell: FirstTableViewCell)
-    func checkThreeStars(cell: FirstTableViewCell)
-    func checkFourStars(cell: FirstTableViewCell)
-}
-
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, currentCell {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +33,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : FirstTableViewCell
-        //        if indexPath.row == 0 {
-        cell = tableView.dequeueReusableCell(withIdentifier: "cell0", for: indexPath) as! FirstTableViewCell
-        cell.delegate = self
         
-        //        }
-        //        else{
-        //            cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //        }
+        let row = indexPath.row
         
+        let cellIdentifier = "cell" + String(indexPath.row)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        
+        switch row {
+        case 0:
+            if let cell = cell as? FirstTableViewCell{
+                cell.delegate = self
+            }
+        case 1:
+            if let cell = cell as? SecondTableViewCell{
+                cell.delegate = self
+            }
+        case 2:
+            if let cell = cell as? ThirdTableViewCell{
+                cell.delegate = self
+            }
+        case 3:
+            if let cell = cell as? FourthTableViewCell{
+                cell.delegate = self
+            }
+        case 4:
+            if let cell = cell as? FifthTableViewCell{
+                cell.delegate = self
+            }
+        default:
+            print("Cell class not found!!")
+        }
         
         return cell
     }

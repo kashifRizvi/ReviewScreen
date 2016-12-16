@@ -10,6 +10,8 @@ import UIKit
 
 class FourthTableViewCell: UITableViewCell {
 
+    var delegate: FourthCellProtocol?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

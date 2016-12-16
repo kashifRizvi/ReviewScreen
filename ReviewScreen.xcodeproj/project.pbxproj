@@ -24,6 +24,7 @@
 		4B4B7B861E02C31B00DD7EC5 /* FourthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B851E02C31B00DD7EC5 /* FourthTableViewCell.swift */; };
 		4B4B7B881E02C32500DD7EC5 /* FifthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B871E02C32500DD7EC5 /* FifthTableViewCell.swift */; };
 		4B4B7B8A1E02C92100DD7EC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B891E02C92100DD7EC5 /* ViewController.swift */; };
+		4B5AA80E1E040156003E5CE3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5AA80D1E040156003E5CE3 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4B4B7B851E02C31B00DD7EC5 /* FourthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthTableViewCell.swift; sourceTree = "<group>"; };
 		4B4B7B871E02C32500DD7EC5 /* FifthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthTableViewCell.swift; sourceTree = "<group>"; };
 		4B4B7B891E02C92100DD7EC5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B5AA80D1E040156003E5CE3 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				4B4B7B831E02C30A00DD7EC5 /* ThirdTableViewCell.swift */,
 				4B4B7B851E02C31B00DD7EC5 /* FourthTableViewCell.swift */,
 				4B4B7B871E02C32500DD7EC5 /* FifthTableViewCell.swift */,
+				4B5AA80D1E040156003E5CE3 /* Protocols.swift */,
 				4B4B7B4E1E0270BA00DD7EC5 /* Assets.xcassets */,
 				4B4B7B501E0270BA00DD7EC5 /* LaunchScreen.storyboard */,
 				4B4B7B531E0270BA00DD7EC5 /* Info.plist */,
@@ -296,6 +299,7 @@
 				4B4B7B451E0270BA00DD7EC5 /* AppDelegate.swift in Sources */,
 				4B4B7B821E02C30100DD7EC5 /* SecondTableViewCell.swift in Sources */,
 				4B4B7B841E02C30A00DD7EC5 /* ThirdTableViewCell.swift in Sources */,
+				4B5AA80E1E040156003E5CE3 /* Protocols.swift in Sources */,
 				4B4B7B8A1E02C92100DD7EC5 /* ViewController.swift in Sources */,
 				4B4B7B801E02C15400DD7EC5 /* FirstTableViewCell.swift in Sources */,
 				4B4B7B4D1E0270BA00DD7EC5 /* ReviewScreen.xcdatamodeld in Sources */,

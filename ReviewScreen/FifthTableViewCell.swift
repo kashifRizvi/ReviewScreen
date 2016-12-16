@@ -10,6 +10,8 @@ import UIKit
 
 class FifthTableViewCell: UITableViewCell {
 
+    var delegate: FifthCellProtocol?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
