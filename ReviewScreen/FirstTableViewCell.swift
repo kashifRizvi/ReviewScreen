@@ -9,17 +9,33 @@
 import UIKit
 
 class FirstTableViewCell: UITableViewCell {
+    var delegate : currentCell?
 
+    @IBOutlet weak var oneOutlet: UIButton!
+    @IBOutlet weak var twoOutlet: UIButton!
+    @IBOutlet weak var threeOutlet: UIButton!
+    @IBOutlet weak var fourOutlet: UIButton!
+    @IBOutlet weak var fiveOutlet: UIButton!
     @IBAction func starOneAction(_ sender: UIButton) {
-        sender.imageView?.image = UIImage(named: "emptyStar")
+//        sender.setBackgroundImage(UIImage(named: "highlightedStar.png"), for: .normal)
+        sender.setImage(UIImage(named: "filledStar.png"), for: .normal)
+
     }
-    @IBAction func straTwoAction(_ sender: UIButton) {
+    @IBAction func starTwoAction(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "filledStar.png"), for: .normal)
+        delegate?.checkOneStar(cell: self)
     }
     @IBAction func starThreeAction(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "filledStar.png"), for: .normal)
+        delegate?.checkTwoStars(cell: self)
     }
     @IBAction func starFourAction(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "filledStar.png"), for: .normal)
+        delegate?.checkThreeStars(cell: self)
     }
     @IBAction func starFiveAction(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "highlightedStar.png"), for: .normal)
+        delegate?.checkFourStars(cell: self)
     }
 
     override func awakeFromNib() {

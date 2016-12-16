@@ -8,7 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol currentCell {
+    func checkOneStar(cell: FirstTableViewCell)
+    func checkTwoStars(cell: FirstTableViewCell)
+    func checkThreeStars(cell: FirstTableViewCell)
+    func checkFourStars(cell: FirstTableViewCell)
+}
+
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, currentCell {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 5
     }
     
     
@@ -36,6 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell : FirstTableViewCell
         //        if indexPath.row == 0 {
         cell = tableView.dequeueReusableCell(withIdentifier: "cell0", for: indexPath) as! FirstTableViewCell
+        cell.delegate = self
         
         //        }
         //        else{
@@ -45,6 +53,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.row == 0 {
+            return 100
+//        }
+//        return 80
+    }
+    
+    func checkOneStar(cell: FirstTableViewCell) {
+        cell.starOneAction(cell.oneOutlet)
+        
+    }
+    func checkTwoStars(cell: FirstTableViewCell) {
+        cell.starTwoAction(cell.twoOutlet)
+        
+    }
+    func checkThreeStars(cell: FirstTableViewCell) {
+        cell.starThreeAction(cell.threeOutlet)
+        
+    }
+    func checkFourStars(cell: FirstTableViewCell) {
+        cell.starFourAction(cell.fourOutlet)
+    }
+    
     
     
     /*

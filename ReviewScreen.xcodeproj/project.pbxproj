@@ -14,7 +14,6 @@
 		4B4B7B521E0270BA00DD7EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B7B501E0270BA00DD7EC5 /* LaunchScreen.storyboard */; };
 		4B4B7B5D1E0270BA00DD7EC5 /* ReviewScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B5C1E0270BA00DD7EC5 /* ReviewScreenTests.swift */; };
 		4B4B7B681E0270BA00DD7EC5 /* ReviewScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B671E0270BA00DD7EC5 /* ReviewScreenUITests.swift */; };
-		4B4B7B761E0275FF00DD7EC5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B751E0275FF00DD7EC5 /* TableViewController.swift */; };
 		4B4B7B7B1E02B5F700DD7EC5 /* defaultPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B7B771E02B5F700DD7EC5 /* defaultPhoto.png */; };
 		4B4B7B7C1E02B5F700DD7EC5 /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B7B781E02B5F700DD7EC5 /* emptyStar.png */; };
 		4B4B7B7D1E02B5F700DD7EC5 /* filledStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B7B791E02B5F700DD7EC5 /* filledStar.png */; };
@@ -58,7 +57,6 @@
 		4B4B7B631E0270BA00DD7EC5 /* ReviewScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4B7B671E0270BA00DD7EC5 /* ReviewScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewScreenUITests.swift; sourceTree = "<group>"; };
 		4B4B7B691E0270BA00DD7EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B4B7B751E0275FF00DD7EC5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		4B4B7B771E02B5F700DD7EC5 /* defaultPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPhoto.png; sourceTree = "<group>"; };
 		4B4B7B781E02B5F700DD7EC5 /* emptyStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyStar.png; sourceTree = "<group>"; };
 		4B4B7B791E02B5F700DD7EC5 /* filledStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledStar.png; sourceTree = "<group>"; };
@@ -120,10 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				4B4B7B441E0270BA00DD7EC5 /* AppDelegate.swift */,
-				4B4B7B751E0275FF00DD7EC5 /* TableViewController.swift */,
 				4B4B7B891E02C92100DD7EC5 /* ViewController.swift */,
-				4B4B7B7F1E02C15400DD7EC5 /* FirstTableViewCell.swift */,
 				4B4B7B481E0270BA00DD7EC5 /* Main.storyboard */,
+				4B4B7B7F1E02C15400DD7EC5 /* FirstTableViewCell.swift */,
 				4B4B7B811E02C30100DD7EC5 /* SecondTableViewCell.swift */,
 				4B4B7B831E02C30A00DD7EC5 /* ThirdTableViewCell.swift */,
 				4B4B7B851E02C31B00DD7EC5 /* FourthTableViewCell.swift */,
@@ -300,7 +297,6 @@
 				4B4B7B821E02C30100DD7EC5 /* SecondTableViewCell.swift in Sources */,
 				4B4B7B841E02C30A00DD7EC5 /* ThirdTableViewCell.swift in Sources */,
 				4B4B7B8A1E02C92100DD7EC5 /* ViewController.swift in Sources */,
-				4B4B7B761E0275FF00DD7EC5 /* TableViewController.swift in Sources */,
 				4B4B7B801E02C15400DD7EC5 /* FirstTableViewCell.swift in Sources */,
 				4B4B7B4D1E0270BA00DD7EC5 /* ReviewScreen.xcdatamodeld in Sources */,
 				4B4B7B861E02C31B00DD7EC5 /* FourthTableViewCell.swift in Sources */,
@@ -547,6 +543,7 @@
 				4B4B7B6E1E0270BA00DD7EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B4B7B6F1E0270BA00DD7EC5 /* Build configuration list for PBXNativeTarget "ReviewScreenTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +552,7 @@
 				4B4B7B711E0270BA00DD7EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B4B7B721E0270BA00DD7EC5 /* Build configuration list for PBXNativeTarget "ReviewScreenUITests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +561,7 @@
 				4B4B7B741E0270BA00DD7EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

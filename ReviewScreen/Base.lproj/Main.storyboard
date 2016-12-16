@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,85 +59,112 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="80"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uXX-Q0-Yzq">
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uXX-Q0-Yzq">
                                 <rect key="frame" x="0.0" y="152" width="375" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell0" rowHeight="80" id="1Ez-YH-4u1" customClass="FirstTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell0" rowHeight="100" id="Uwy-G1-yBC" customClass="FirstTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Ez-YH-4u1" id="iQu-kZ-xuH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uwy-G1-yBC" id="3Rd-7G-vfs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCW-eP-cfD">
-                                                    <rect key="frame" x="134" y="2" width="107" height="20.5"/>
+                                                    <rect key="frame" x="134" y="8" width="107" height="23.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-U3-8Nv">
-                                                    <rect key="frame" x="50" y="42.5" width="275" height="32"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="b7L-Zs-U47">
+                                                    <rect key="frame" x="75" y="46.5" width="225" height="45"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-C3-gaX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="32"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3q-rc-qs6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="2Ns-H9-Vld"/>
+                                                                <constraint firstAttribute="height" constant="45" id="wGE-7y-WU6"/>
+                                                            </constraints>
+                                                            <state key="normal" title="But" image="emptyStar.png"/>
                                                             <connections>
-                                                                <action selector="starOneAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="jI3-ln-8nc"/>
+                                                                <action selector="starOneAction:" destination="Uwy-G1-yBC" eventType="touchUpInside" id="OFU-Uz-ZYW"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZC-sP-Ma1">
-                                                            <rect key="frame" x="55" y="0.0" width="55" height="32"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRL-Fe-PbD">
+                                                            <rect key="frame" x="45" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="7zR-oI-dpr"/>
+                                                                <constraint firstAttribute="height" constant="45" id="EiN-pJ-hHF"/>
+                                                            </constraints>
+                                                            <state key="normal" title="But" image="emptyStar.png"/>
                                                             <connections>
-                                                                <action selector="straTwoAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="VEf-YY-747"/>
+                                                                <action selector="starTwoAction:" destination="Uwy-G1-yBC" eventType="touchUpInside" id="Uw7-5u-ueW"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEV-4X-6Uv">
-                                                            <rect key="frame" x="110" y="0.0" width="55" height="32"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh4-lb-704">
+                                                            <rect key="frame" x="90" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="NHV-Pv-Q98"/>
+                                                                <constraint firstAttribute="height" constant="45" id="ikX-zf-kHT"/>
+                                                            </constraints>
+                                                            <state key="normal" image="emptyStar.png"/>
                                                             <connections>
-                                                                <action selector="starThreeAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="ceh-2D-R4l"/>
+                                                                <action selector="starThreeAction:" destination="Uwy-G1-yBC" eventType="touchUpInside" id="dGX-s2-Qsn"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQU-gb-FrH">
-                                                            <rect key="frame" x="165" y="0.0" width="55" height="32"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JF0-BV-Eqo">
+                                                            <rect key="frame" x="135" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="Bwk-EV-YzJ"/>
+                                                                <constraint firstAttribute="height" constant="45" id="gYi-rT-jly"/>
+                                                            </constraints>
+                                                            <state key="normal" title="But" image="emptyStar.png"/>
                                                             <connections>
-                                                                <action selector="starFourAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="xcM-GA-2Zr"/>
+                                                                <action selector="starFourAction:" destination="Uwy-G1-yBC" eventType="touchUpInside" id="LJ0-Gl-fbW"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObF-3S-U1n">
-                                                            <rect key="frame" x="220" y="0.0" width="55" height="32"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8H-gs-0ol">
+                                                            <rect key="frame" x="180" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="1FF-SL-Tw5"/>
+                                                                <constraint firstAttribute="width" constant="45" id="XRs-yK-Ivv"/>
+                                                            </constraints>
+                                                            <state key="normal" title="But" image="emptyStar.png"/>
                                                             <connections>
-                                                                <action selector="starFiveAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="CaB-Fj-q6O"/>
+                                                                <action selector="starFiveAction:" destination="Uwy-G1-yBC" eventType="touchUpInside" id="cXl-36-Nvv"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="lQU-gb-FrH" firstAttribute="width" secondItem="ObF-3S-U1n" secondAttribute="width" id="YYc-nn-d7v"/>
-                                                        <constraint firstItem="rEV-4X-6Uv" firstAttribute="width" secondItem="lQU-gb-FrH" secondAttribute="width" id="aEP-Kp-S5C"/>
-                                                        <constraint firstItem="IWU-C3-gaX" firstAttribute="width" secondItem="EZC-sP-Ma1" secondAttribute="width" id="yD6-wP-PPy"/>
-                                                        <constraint firstItem="EZC-sP-Ma1" firstAttribute="width" secondItem="rEV-4X-6Uv" secondAttribute="width" id="zKi-9q-rTo"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="WCy-U3-8Nv" firstAttribute="top" secondItem="wCW-eP-cfD" secondAttribute="bottom" constant="20" id="Pnk-p5-HIE"/>
-                                                <constraint firstItem="wCW-eP-cfD" firstAttribute="top" secondItem="iQu-kZ-xuH" secondAttribute="top" constant="2" id="Wki-Ba-Ukt"/>
-                                                <constraint firstAttribute="trailing" secondItem="WCy-U3-8Nv" secondAttribute="trailing" priority="750" constant="50" id="Wmy-bQ-hr3"/>
-                                                <constraint firstAttribute="bottom" secondItem="WCy-U3-8Nv" secondAttribute="bottom" constant="5" id="ami-mu-FJq"/>
-                                                <constraint firstItem="WCy-U3-8Nv" firstAttribute="leading" secondItem="iQu-kZ-xuH" secondAttribute="leading" priority="750" constant="50" id="jcK-LV-ZPQ"/>
-                                                <constraint firstItem="wCW-eP-cfD" firstAttribute="centerX" secondItem="iQu-kZ-xuH" secondAttribute="centerX" id="sPk-wM-mbd"/>
+                                                <constraint firstItem="b7L-Zs-U47" firstAttribute="centerX" secondItem="3Rd-7G-vfs" secondAttribute="centerX" id="0P2-11-vbD"/>
+                                                <constraint firstItem="wCW-eP-cfD" firstAttribute="centerX" secondItem="3Rd-7G-vfs" secondAttribute="centerX" id="Bfw-5a-yth"/>
+                                                <constraint firstItem="b7L-Zs-U47" firstAttribute="leading" secondItem="3Rd-7G-vfs" secondAttribute="leadingMargin" priority="750" constant="67" id="IBi-Oi-NNa"/>
+                                                <constraint firstItem="wCW-eP-cfD" firstAttribute="top" secondItem="3Rd-7G-vfs" secondAttribute="top" constant="8" id="Tqj-wK-u38"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="b7L-Zs-U47" secondAttribute="trailing" priority="750" constant="67" id="bv5-yk-9Jf"/>
+                                                <constraint firstItem="b7L-Zs-U47" firstAttribute="bottom" secondItem="3Rd-7G-vfs" secondAttribute="bottomMargin" id="nm8-Y4-VoN"/>
+                                                <constraint firstItem="b7L-Zs-U47" firstAttribute="top" secondItem="wCW-eP-cfD" secondAttribute="bottom" constant="15" id="vNR-45-5FO"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="WCy-U3-8Nv" firstAttribute="centerX" secondItem="1Ez-YH-4u1" secondAttribute="centerX" id="5vu-VN-TJ9"/>
-                                        </constraints>
+                                        <connections>
+                                            <outlet property="fiveOutlet" destination="C8H-gs-0ol" id="Bup-aM-Bel"/>
+                                            <outlet property="fourOutlet" destination="JF0-BV-Eqo" id="sQg-HW-7Ne"/>
+                                            <outlet property="oneOutlet" destination="d3q-rc-qs6" id="2xQ-A2-Tnk"/>
+                                            <outlet property="threeOutlet" destination="Kh4-lb-704" id="jhe-69-xd2"/>
+                                            <outlet property="twoOutlet" destination="tRL-Fe-PbD" id="8Qw-a5-33c"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="88" id="1Ez-YH-4u1" customClass="FirstTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Ez-YH-4u1" id="iQu-kZ-xuH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="68" id="pqA-6Y-XHz" customClass="SecondTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="68"/>
+                                        <rect key="frame" x="0.0" y="216" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pqA-6Y-XHz" id="qHn-d5-J0a">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
@@ -150,16 +178,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Uwy-G1-yBC" customClass="ThirdTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="176" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uwy-G1-yBC" id="3Rd-7G-vfs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="Y6x-am-4Dz" customClass="FourthTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="236" width="375" height="76"/>
+                                        <rect key="frame" x="0.0" y="284" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y6x-am-4Dz" id="0R3-Do-CQN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
@@ -167,7 +187,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="scR-f8-nJP" customClass="FifthTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="312" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="360" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="scR-f8-nJP" id="KxO-2L-ZHd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
@@ -175,7 +195,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="V3y-MA-bsr">
-                                        <rect key="frame" x="0.0" y="378" width="375" height="48"/>
+                                        <rect key="frame" x="0.0" y="426" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V3y-MA-bsr" id="dzF-B6-Wp9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
@@ -217,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yq8-Eo-9lD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="42.728635682158924"/>
+            <point key="canvasLocation" x="1662" y="43"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lgt-yx-97S">
@@ -240,5 +260,6 @@
     </scenes>
     <resources>
         <image name="Unfilled Star" width="292" height="282"/>
+        <image name="emptyStar.png" width="510" height="512"/>
     </resources>
 </document>
