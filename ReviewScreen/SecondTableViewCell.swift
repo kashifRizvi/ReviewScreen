@@ -12,6 +12,18 @@ class SecondTableViewCell: UITableViewCell {
     
     var delegate: SecondCellProtocol?
 
+
+    @IBAction func hiredAction(_ sender: UIButton) {
+        print("Hired action pressed !")
+    }
+    @IBAction func interviewedAction(_ sender: UIButton) {
+        print("Interviewed action pressed !")
+
+    }
+    @IBAction func otherAction(_ sender: UIButton) {
+        print("Other action pressed !")
+
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

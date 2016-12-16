@@ -143,7 +143,7 @@
                                                 <constraint firstItem="b7L-Zs-U47" firstAttribute="leading" secondItem="3Rd-7G-vfs" secondAttribute="leadingMargin" priority="750" constant="67" id="IBi-Oi-NNa"/>
                                                 <constraint firstItem="wCW-eP-cfD" firstAttribute="top" secondItem="3Rd-7G-vfs" secondAttribute="top" constant="8" id="Tqj-wK-u38"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="b7L-Zs-U47" secondAttribute="trailing" priority="750" constant="67" id="bv5-yk-9Jf"/>
-                                                <constraint firstItem="b7L-Zs-U47" firstAttribute="bottom" secondItem="3Rd-7G-vfs" secondAttribute="bottomMargin" constant="8" id="nm8-Y4-VoN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="b7L-Zs-U47" secondAttribute="bottom" constant="-8" id="nm8-Y4-VoN"/>
                                                 <constraint firstItem="b7L-Zs-U47" firstAttribute="top" secondItem="wCW-eP-cfD" secondAttribute="bottom" constant="15" id="vNR-45-5FO"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -155,7 +155,7 @@
                                             <outlet property="twoOutlet" destination="tRL-Fe-PbD" id="8Qw-a5-33c"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="88" id="1Ez-YH-4u1" customClass="FirstTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="88" id="1Ez-YH-4u1" customClass="SecondTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Ez-YH-4u1" id="iQu-kZ-xuH">
@@ -168,38 +168,41 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CZ-eG-6Sn">
-                                                    <rect key="frame" x="109" y="50" width="157" height="30"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qFs-y4-7IK">
+                                                    <rect key="frame" x="47.5" y="44" width="280" height="30"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVl-LF-f5Z">
-                                                            <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-3Q-5kA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                                             <state key="normal" title="Hired"/>
+                                                            <connections>
+                                                                <action selector="hiredAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="5ch-9D-DHS"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-79-JHW">
-                                                            <rect key="frame" x="37" y="0.0" width="80" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qM-Zs-bfh">
+                                                            <rect key="frame" x="100" y="0.0" width="80" height="30"/>
                                                             <state key="normal" title="Interviewed"/>
+                                                            <connections>
+                                                                <action selector="interviewedAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="VKi-mw-uMe"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZt-lw-SBk">
-                                                            <rect key="frame" x="117" y="0.0" width="40" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmP-Af-hwc">
+                                                            <rect key="frame" x="200" y="0.0" width="80" height="30"/>
                                                             <state key="normal" title="Other"/>
+                                                            <connections>
+                                                                <action selector="otherAction:" destination="1Ez-YH-4u1" eventType="touchUpInside" id="KIi-P9-f7N"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="FZt-lw-SBk" firstAttribute="leading" secondItem="7Aw-79-JHW" secondAttribute="trailing" constant="20" id="J49-2p-qt3"/>
-                                                        <constraint firstItem="7Aw-79-JHW" firstAttribute="leading" secondItem="yVl-LF-f5Z" secondAttribute="trailing" constant="20" id="qcX-mU-b15"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9CZ-eG-6Sn" firstAttribute="top" secondItem="nwg-TZ-eYV" secondAttribute="bottom" constant="13.5" id="Phw-Dk-9TX"/>
                                                 <constraint firstItem="nwg-TZ-eYV" firstAttribute="top" secondItem="iQu-kZ-xuH" secondAttribute="topMargin" constant="8" id="tcS-vK-s8i"/>
                                                 <constraint firstItem="nwg-TZ-eYV" firstAttribute="centerX" secondItem="iQu-kZ-xuH" secondAttribute="centerX" id="yxs-Pw-yhK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="9CZ-eG-6Sn" secondAttribute="bottom" constant="8" id="2nP-tY-mGR"/>
-                                            <constraint firstItem="9CZ-eG-6Sn" firstAttribute="leading" secondItem="1Ez-YH-4u1" secondAttribute="leading" constant="109" id="3Rs-yx-CtZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="9CZ-eG-6Sn" secondAttribute="trailing" constant="109" id="76V-zi-6Dz"/>
+                                            <constraint firstItem="qFs-y4-7IK" firstAttribute="centerX" secondItem="1Ez-YH-4u1" secondAttribute="centerX" id="4hv-ey-0Kv"/>
+                                            <constraint firstAttribute="bottom" secondItem="qFs-y4-7IK" secondAttribute="bottom" constant="14" id="MXo-Ic-yRQ"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="68" id="pqA-6Y-XHz" customClass="SecondTableViewCell" customModule="ReviewScreen" customModuleProvider="target">
