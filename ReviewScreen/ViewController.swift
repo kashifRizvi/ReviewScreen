@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -28,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 7
     }
     
     
@@ -100,6 +101,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return 100
         case 2:
             return 165
+        case 6:
+            return tableView.rowHeight
         default:
             return 100
         }
