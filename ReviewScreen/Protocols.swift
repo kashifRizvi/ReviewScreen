@@ -30,3 +30,11 @@ protocol FourthCellProtocol {
 protocol FifthCellProtocol {
     
 }
+
+protocol SixthCellProtocol {
+    
+}
+
+protocol SeventhCellprotocol {
+    
+}

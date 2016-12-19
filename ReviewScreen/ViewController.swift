@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol, SixthCellProtocol, SeventhCellprotocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 1:
             if let cell = cell as? SecondTableViewCell{
                 cell.delegate = self
+                
+                
+                cell.hiredButtonOutlet.layer.cornerRadius = 15
+                cell.hiredButtonOutlet.layer.borderWidth = 1
+                cell.hiredButtonOutlet.layer.borderColor = UIColor.darkGray.cgColor
+                
+                cell.interviewedButtonOutlet.layer.cornerRadius = 15
+                cell.interviewedButtonOutlet.layer.borderWidth = 1
+                cell.interviewedButtonOutlet.layer.borderColor = UIColor.darkGray.cgColor
+                
+                cell.OtherButtonOutlet.layer.cornerRadius = 15
+                cell.OtherButtonOutlet.layer.borderWidth = 1
+                cell.OtherButtonOutlet.layer.borderColor = UIColor.darkGray.cgColor
             }
         case 2:
             if let cell = cell as? ThirdTableViewCell{
@@ -61,6 +74,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let cell = cell as? FifthTableViewCell{
                 cell.delegate = self
             }
+        case 5:
+            if let cell = cell as? SixthTableViewCell{
+                cell.delegate = self
+            }
+        case 6:
+            if let cell = cell as? SeventhTableViewCell{
+                cell.delegate = self
+            }
         default:
             print("Cell class not found!!")
         }
@@ -69,10 +90,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 0 {
+        
+        let row = indexPath.row
+        
+        switch row {
+        case 0:
             return 100
-//        }
-//        return 80
+        case 1:
+            return 100
+        case 2:
+            return 165
+        default:
+            return 100
+        }
     }
     
     func checkOneStar(cell: FirstTableViewCell) {
