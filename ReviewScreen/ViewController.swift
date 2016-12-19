@@ -10,10 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol, SixthCellProtocol, SeventhCellprotocol {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 100
         // Do any additional setup after loading the view.
     }
 
@@ -90,23 +93,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        let row = indexPath.row
-        
-        switch row {
-        case 0:
-            return 100
-        case 1:
-            return 100
-        case 2:
-            return 165
-        case 6:
-            return tableView.rowHeight
-        default:
-            return 100
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        
+//        let row = indexPath.row
+//        
+//        switch row {
+//        case 0:
+//            return 100
+//        case 1:
+//            return 100
+//        case 2:
+//            return 165
+//        case 6:
+//            return tableView.rowHeight
+//        default:
+//            return 100
+//        }
+//    }
     
     func checkOneStar(cell: FirstTableViewCell) {
         cell.starOneAction(cell.oneOutlet)

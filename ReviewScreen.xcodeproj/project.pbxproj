@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B26898D1E07F98500B8D05F /* SixthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26898C1E07F98500B8D05F /* SixthTableViewCell.swift */; };
 		4B26898F1E07F9F300B8D05F /* SeventhTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26898E1E07F9F300B8D05F /* SeventhTableViewCell.swift */; };
+		4B2689911E082C0E00B8D05F /* faceBlank.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4B2689901E082C0E00B8D05F /* faceBlank.jpeg */; };
 		4B4B7B451E0270BA00DD7EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B441E0270BA00DD7EC5 /* AppDelegate.swift */; };
 		4B4B7B4A1E0270BA00DD7EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B7B481E0270BA00DD7EC5 /* Main.storyboard */; };
 		4B4B7B4D1E0270BA00DD7EC5 /* ReviewScreen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B4B1E0270BA00DD7EC5 /* ReviewScreen.xcdatamodeld */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		4B26898C1E07F98500B8D05F /* SixthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixthTableViewCell.swift; sourceTree = "<group>"; };
 		4B26898E1E07F9F300B8D05F /* SeventhTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeventhTableViewCell.swift; sourceTree = "<group>"; };
+		4B2689901E082C0E00B8D05F /* faceBlank.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faceBlank.jpeg; sourceTree = "<group>"; };
 		4B4B7B411E0270BA00DD7EC5 /* ReviewScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4B7B441E0270BA00DD7EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B4B7B491E0270BA00DD7EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				4B4B7B4E1E0270BA00DD7EC5 /* Assets.xcassets */,
 				4B4B7B501E0270BA00DD7EC5 /* LaunchScreen.storyboard */,
 				4B4B7B531E0270BA00DD7EC5 /* Info.plist */,
+				4B2689901E082C0E00B8D05F /* faceBlank.jpeg */,
 				4B4B7B771E02B5F700DD7EC5 /* defaultPhoto.png */,
 				4B4B7B781E02B5F700DD7EC5 /* emptyStar.png */,
 				4B4B7B791E02B5F700DD7EC5 /* filledStar.png */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4B7B7E1E02B5F700DD7EC5 /* highlightedStar.png in Resources */,
+				4B2689911E082C0E00B8D05F /* faceBlank.jpeg in Resources */,
 				4B4B7B521E0270BA00DD7EC5 /* LaunchScreen.storyboard in Resources */,
 				4B4B7B7C1E02B5F700DD7EC5 /* emptyStar.png in Resources */,
 				4B4B7B4F1E0270BA00DD7EC5 /* Assets.xcassets in Resources */,
