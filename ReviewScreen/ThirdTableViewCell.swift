@@ -17,6 +17,23 @@ class ThirdTableViewCell: UITableViewCell {
     @IBOutlet weak var seniorCareOutlet: UIButton!
     @IBOutlet weak var housekeepingOutlet: UIButton!
     
+    @IBAction func childCareAction(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.lightGray
+        sender.setTitleColor(UIColor.white, for: .normal)
+    }
+    @IBAction func petCareAction(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.lightGray
+        sender.setTitleColor(UIColor.white, for: .normal)
+    }
+    @IBAction func seniorCareAction(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.lightGray
+        sender.setTitleColor(UIColor.white, for: .normal)
+    }
+    @IBAction func housekeepingAction(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.lightGray
+        sender.setTitleColor(UIColor.white, for: .normal)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         childCareOutlet.layer.cornerRadius = 15

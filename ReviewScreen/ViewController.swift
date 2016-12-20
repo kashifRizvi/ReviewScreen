@@ -94,7 +94,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 0:
             return tableView.rowHeight
         case 1:
-            return tableView.rowHeight
+//            if self.isSecondCellHidden{
+                return tableView.rowHeight
+//            }
+//            return tableView.rowHeight+50
         case 2:
             if self.isSecondCellHidden{
                 return 0
@@ -152,6 +155,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.isSecondCellHidden = true
         self.isThirdCellHidden = true
         let index = self.tableView.indexPath(for: cell)
+//        print(index?.row)
         self.tableView.reloadRows(at: [index!], with: .automatic)
     }
     
