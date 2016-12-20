@@ -12,11 +12,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
+    var sitter = ReviewSitter()
+    var isSecondCellHidden : Bool = true
+    var isThirdCellHidden : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -52,19 +58,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 1:
             if let cell = cell as? SecondTableViewCell{
                 cell.delegate = self
-                
-                
-                cell.hiredButtonOutlet.layer.cornerRadius = 15
-                cell.hiredButtonOutlet.layer.borderWidth = 1
-                cell.hiredButtonOutlet.layer.borderColor = UIColor.darkGray.cgColor
-                
-                cell.interviewedButtonOutlet.layer.cornerRadius = 15
-                cell.interviewedButtonOutlet.layer.borderWidth = 1
-                cell.interviewedButtonOutlet.layer.borderColor = UIColor.darkGray.cgColor
-                
-                cell.OtherButtonOutlet.layer.cornerRadius = 15
-                cell.OtherButtonOutlet.layer.borderWidth = 1
-                cell.OtherButtonOutlet.layer.borderColor = UIColor.darkGray.cgColor
             }
         case 2:
             if let cell = cell as? ThirdTableViewCell{
@@ -93,38 +86,73 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        
-//        let row = indexPath.row
-//        
-//        switch row {
-//        case 0:
-//            return 100
-//        case 1:
-//            return 100
-//        case 2:
-//            return 165
-//        case 6:
-//            return tableView.rowHeight
-//        default:
-//            return 100
-//        }
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let row = indexPath.row
+        
+        switch row {
+        case 0:
+            return tableView.rowHeight
+        case 1:
+            return tableView.rowHeight
+        case 2:
+            if self.isSecondCellHidden{
+                return 0
+            }
+            return tableView.rowHeight
+        case 3:
+            if isThirdCellHidden {
+                return 0
+            }
+            return tableView.rowHeight
+        case 6:
+            return tableView.rowHeight
+        default:
+            return tableView.rowHeight
+        }
+    }
     
-    func checkOneStar(cell: FirstTableViewCell) {
+    // MARK: - First cell protocol method
+    
+    func checkZeroStar(cell: FirstTableViewCell, ratings: Int8?) {
+        self.sitter.rating = ratings
+    }
+    
+    func checkOneStar(cell: FirstTableViewCell, ratings: Int8?) {
+        self.sitter.rating = ratings
         cell.starOneAction(cell.oneOutlet)
         
     }
-    func checkTwoStars(cell: FirstTableViewCell) {
+    func checkTwoStars(cell: FirstTableViewCell, ratings: Int8?) {
+        self.sitter.rating = ratings
         cell.starTwoAction(cell.twoOutlet)
         
     }
-    func checkThreeStars(cell: FirstTableViewCell) {
+    func checkThreeStars(cell: FirstTableViewCell, ratings: Int8?) {
+        self.sitter.rating = ratings
         cell.starThreeAction(cell.threeOutlet)
         
     }
-    func checkFourStars(cell: FirstTableViewCell) {
+    func checkFourStars(cell: FirstTableViewCell, ratings: Int8?) {
+        self.sitter.rating = ratings
         cell.starFourAction(cell.fourOutlet)
+    }
+    
+    //MARK: - Second cell protocol methods
+    
+    func interactionSelected(cell: SecondTableViewCell, methodName: String?) {
+        self.sitter.modeOfInteraction = methodName
+        self.isSecondCellHidden = false
+        let index = self.tableView.indexPath(for: cell)
+        self.tableView.reloadRows(at: [index!], with: .fade)
+
+    }
+    
+    func interactionDeselected(cell: SecondTableViewCell) {
+        self.isSecondCellHidden = true
+        self.isThirdCellHidden = true
+        let index = self.tableView.indexPath(for: cell)
+        self.tableView.reloadRows(at: [index!], with: .automatic)
     }
     
     

@@ -12,6 +12,8 @@ class SeventhTableViewCell: UITableViewCell {
 
     var delegate : SeventhCellprotocol?
     
+    @IBOutlet weak var textViewOutlet: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

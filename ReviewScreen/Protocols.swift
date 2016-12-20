@@ -9,14 +9,16 @@
 import Foundation
 
 protocol FirstCellProtocol {
-    func checkOneStar(cell: FirstTableViewCell)
-    func checkTwoStars(cell: FirstTableViewCell)
-    func checkThreeStars(cell: FirstTableViewCell)
-    func checkFourStars(cell: FirstTableViewCell)
+    func checkZeroStar(cell: FirstTableViewCell, ratings: Int8?)
+    func checkOneStar(cell: FirstTableViewCell, ratings: Int8?)
+    func checkTwoStars(cell: FirstTableViewCell, ratings: Int8?)
+    func checkThreeStars(cell: FirstTableViewCell, ratings: Int8?)
+    func checkFourStars(cell: FirstTableViewCell, ratings: Int8?)
 }
 
 protocol SecondCellProtocol {
-    
+    func interactionSelected(cell: SecondTableViewCell, methodName: String?)
+    func interactionDeselected(cell: SecondTableViewCell)
 }
 
 protocol ThirdCellProtocol {
