@@ -20,18 +20,22 @@ class ThirdTableViewCell: UITableViewCell {
     @IBAction func childCareAction(_ sender: UIButton) {
         sender.backgroundColor = UIColor.lightGray
         sender.setTitleColor(UIColor.white, for: .normal)
+        delegate?.updateWorkFields(cell: self, methodName: "Child Care")
     }
     @IBAction func petCareAction(_ sender: UIButton) {
         sender.backgroundColor = UIColor.lightGray
         sender.setTitleColor(UIColor.white, for: .normal)
+        delegate?.updateWorkFields(cell: self, methodName: "Pet Care")
     }
     @IBAction func seniorCareAction(_ sender: UIButton) {
         sender.backgroundColor = UIColor.lightGray
         sender.setTitleColor(UIColor.white, for: .normal)
+        delegate?.updateWorkFields(cell: self, methodName: "Senior Care")
     }
     @IBAction func housekeepingAction(_ sender: UIButton) {
         sender.backgroundColor = UIColor.lightGray
         sender.setTitleColor(UIColor.white, for: .normal)
+        delegate?.updateWorkFields(cell: self, methodName: "Housekeeping")
     }
     
     override func awakeFromNib() {

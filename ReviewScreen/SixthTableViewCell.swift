@@ -11,6 +11,9 @@ import UIKit
 class SixthTableViewCell: UITableViewCell {
     var delegate : SixthCellProtocol?
 
+    @IBAction func isDependableAction(_ sender: UIButton) {
+        delegate?.isDependable(cell: self, withValue: (sender.titleLabel?.text)!)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

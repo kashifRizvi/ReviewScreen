@@ -12,6 +12,9 @@ class FifthTableViewCell: UITableViewCell {
 
     var delegate: FifthCellProtocol?
     
+    @IBAction func isPunctualAction(_ sender: UIButton) {
+        delegate?.isPunctual(cell: self, withValue: (sender.titleLabel?.text)!)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

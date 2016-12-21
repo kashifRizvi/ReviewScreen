@@ -17,26 +17,30 @@ protocol FirstCellProtocol {
 }
 
 protocol SecondCellProtocol {
-    func interactionSelected(cell: SecondTableViewCell, methodName: String?)
+    func interactionSelected(cell: SecondTableViewCell, methodName: String)
     func interactionDeselected(cell: SecondTableViewCell)
 }
 
 protocol ThirdCellProtocol {
-    
+    func updateWorkFields(cell: ThirdTableViewCell, methodName: String)
 }
 
 protocol FourthCellProtocol {
-    
+    func willHireAgain(cell: FourthTableViewCell, isHirable: String)
 }
 
 protocol FifthCellProtocol {
-    
+    func isPunctual(cell: FifthTableViewCell, withValue: String)
 }
 
 protocol SixthCellProtocol {
-    
+    func isDependable(cell: SixthTableViewCell, withValue: String)
 }
 
-protocol SeventhCellprotocol {
-    
+protocol SeventhCellProtocol {
+    func segueTo(cell: SeventhTableViewCell)
+}
+
+protocol textViewProtocol {
+    func setTextViewText(withText: String?)
 }

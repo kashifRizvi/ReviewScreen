@@ -27,6 +27,8 @@
 		4B4B7B861E02C31B00DD7EC5 /* FourthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B851E02C31B00DD7EC5 /* FourthTableViewCell.swift */; };
 		4B4B7B881E02C32500DD7EC5 /* FifthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B871E02C32500DD7EC5 /* FifthTableViewCell.swift */; };
 		4B4B7B8A1E02C92100DD7EC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B7B891E02C92100DD7EC5 /* ViewController.swift */; };
+		4B4FC4901E0A6ABB009BD055 /* ReviewRemarksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FC48F1E0A6ABB009BD055 /* ReviewRemarksController.swift */; };
+		4B4FC4921E0AB514009BD055 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FC4911E0AB514009BD055 /* TableViewController.swift */; };
 		4B5AA80E1E040156003E5CE3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5AA80D1E040156003E5CE3 /* Protocols.swift */; };
 		4BD6871E1E090B0500E265DA /* hiredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6871D1E090B0500E265DA /* hiredButton.swift */; };
 		4BD687201E0933F700E265DA /* ReviewSitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6871F1E0933F700E265DA /* ReviewSitter.swift */; };
@@ -76,6 +78,8 @@
 		4B4B7B851E02C31B00DD7EC5 /* FourthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthTableViewCell.swift; sourceTree = "<group>"; };
 		4B4B7B871E02C32500DD7EC5 /* FifthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthTableViewCell.swift; sourceTree = "<group>"; };
 		4B4B7B891E02C92100DD7EC5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B4FC48F1E0A6ABB009BD055 /* ReviewRemarksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewRemarksController.swift; sourceTree = "<group>"; };
+		4B4FC4911E0AB514009BD055 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4B5AA80D1E040156003E5CE3 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		4BD6871D1E090B0500E265DA /* hiredButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hiredButton.swift; sourceTree = "<group>"; };
 		4BD6871F1E0933F700E265DA /* ReviewSitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewSitter.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				4B4B7B441E0270BA00DD7EC5 /* AppDelegate.swift */,
 				4B4B7B891E02C92100DD7EC5 /* ViewController.swift */,
 				4B4B7B481E0270BA00DD7EC5 /* Main.storyboard */,
+				4B4FC4911E0AB514009BD055 /* TableViewController.swift */,
 				4B4B7B7F1E02C15400DD7EC5 /* FirstTableViewCell.swift */,
 				4B4B7B811E02C30100DD7EC5 /* SecondTableViewCell.swift */,
 				4B4B7B831E02C30A00DD7EC5 /* ThirdTableViewCell.swift */,
@@ -141,6 +146,7 @@
 				4B26898E1E07F9F300B8D05F /* SeventhTableViewCell.swift */,
 				4B5AA80D1E040156003E5CE3 /* Protocols.swift */,
 				4BD6871F1E0933F700E265DA /* ReviewSitter.swift */,
+				4B4FC48F1E0A6ABB009BD055 /* ReviewRemarksController.swift */,
 				4B4B7B4E1E0270BA00DD7EC5 /* Assets.xcassets */,
 				4B4B7B501E0270BA00DD7EC5 /* LaunchScreen.storyboard */,
 				4BD6871D1E090B0500E265DA /* hiredButton.swift */,
@@ -318,12 +324,14 @@
 				4B4B7B841E02C30A00DD7EC5 /* ThirdTableViewCell.swift in Sources */,
 				4B5AA80E1E040156003E5CE3 /* Protocols.swift in Sources */,
 				4B4B7B8A1E02C92100DD7EC5 /* ViewController.swift in Sources */,
+				4B4FC4901E0A6ABB009BD055 /* ReviewRemarksController.swift in Sources */,
 				4B4B7B801E02C15400DD7EC5 /* FirstTableViewCell.swift in Sources */,
 				4B26898D1E07F98500B8D05F /* SixthTableViewCell.swift in Sources */,
 				4BD6871E1E090B0500E265DA /* hiredButton.swift in Sources */,
 				4BD687201E0933F700E265DA /* ReviewSitter.swift in Sources */,
 				4B4B7B4D1E0270BA00DD7EC5 /* ReviewScreen.xcdatamodeld in Sources */,
 				4B4B7B861E02C31B00DD7EC5 /* FourthTableViewCell.swift in Sources */,
+				4B4FC4921E0AB514009BD055 /* TableViewController.swift in Sources */,
 				4B4B7B881E02C32500DD7EC5 /* FifthTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

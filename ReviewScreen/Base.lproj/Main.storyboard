@@ -27,7 +27,7 @@
                                 <rect key="frame" x="136" y="318" width="102" height="30"/>
                                 <state key="normal" title="Write a Review"/>
                                 <connections>
-                                    <segue destination="w57-ew-EJw" kind="show" id="bva-zq-3pn"/>
+                                    <segue destination="w57-ew-EJw" kind="show" identifier="toReviewScreen" id="bva-zq-3pn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,12 +41,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umG-0c-F1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.79999999999995" y="42.728635682158924"/>
+            <point key="canvasLocation" x="961" y="43"/>
         </scene>
         <!--Write a Review-->
         <scene sceneID="p1e-6Y-Pvd">
             <objects>
-                <viewController id="w57-ew-EJw" customClass="ViewController" customModule="ReviewScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w57-ew-EJw" customClass="ViewController" customModule="ReviewScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hoC-77-pNV"/>
                         <viewControllerLayoutGuide type="bottom" id="5Gv-SL-Cx2"/>
@@ -232,7 +232,7 @@
                                         <rect key="frame" x="0.0" y="223" width="375" height="168"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pqA-6Y-XHz" id="qHn-d5-J0a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XYn-jK-Dth">
@@ -323,7 +323,7 @@
                                         <rect key="frame" x="0.0" y="391" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y6x-am-4Dz" id="0R3-Do-CQN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you hire sitter again?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-g3-OSc">
@@ -340,12 +340,18 @@
                                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                             <state key="normal" title="No"/>
+                                                            <connections>
+                                                                <action selector="willHireAgainAction:" destination="Y6x-am-4Dz" eventType="touchUpInside" id="WGS-mm-kjj"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ke5-g1-m57">
                                                             <rect key="frame" x="95" y="1.5" width="45" height="28"/>
                                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                             <state key="normal" title="Yes"/>
+                                                            <connections>
+                                                                <action selector="willHireAgainAction:" destination="Y6x-am-4Dz" eventType="touchUpInside" id="4is-Pp-jQU"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -364,7 +370,7 @@
                                         <rect key="frame" x="0.0" y="466" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="scR-f8-nJP" id="KxO-2L-ZHd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is sitter punctual?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kih-7e-SlW">
@@ -380,11 +386,17 @@
                                                             <rect key="frame" x="0.0" y="1.5" width="45" height="28"/>
                                                             <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                             <state key="normal" title="No"/>
+                                                            <connections>
+                                                                <action selector="isPunctualAction:" destination="scR-f8-nJP" eventType="touchUpInside" id="EC2-em-pSb"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pY-WQ-cP6">
                                                             <rect key="frame" x="95" y="1.5" width="45" height="28"/>
                                                             <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                             <state key="normal" title="Yes"/>
+                                                            <connections>
+                                                                <action selector="isPunctualAction:" destination="scR-f8-nJP" eventType="touchUpInside" id="RfI-ZN-Aqf"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -418,11 +430,17 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="23"/>
                                                             <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                             <state key="normal" title="No"/>
+                                                            <connections>
+                                                                <action selector="isDependableAction:" destination="daa-y4-tNN" eventType="touchUpInside" id="lMs-Qd-mnI"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Q-Mp-ba2">
                                                             <rect key="frame" x="95" y="0.0" width="45" height="23"/>
                                                             <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                             <state key="normal" title="Yes"/>
+                                                            <connections>
+                                                                <action selector="isDependableAction:" destination="daa-y4-tNN" eventType="touchUpInside" id="hKF-wx-1Id"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -495,11 +513,92 @@
                     <navigationItem key="navigationItem" title="Write a Review" id="y0a-V8-owy"/>
                     <connections>
                         <outlet property="tableView" destination="uXX-Q0-Yzq" id="JP7-cU-7R2"/>
+                        <segue destination="SRF-7M-3Dn" kind="show" identifier="toRemarksInput" id="q5t-Zc-LWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yq8-Eo-9lD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661.5999999999999" y="42.728635682158924"/>
+            <point key="canvasLocation" x="1706" y="43"/>
+        </scene>
+        <!--Review Remarks Controller-->
+        <scene sceneID="kz4-MU-a9d">
+            <objects>
+                <viewController storyboardIdentifier="identifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SRF-7M-3Dn" customClass="ReviewRemarksController" customModule="ReviewScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CO6-Fj-Hip"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tub-Et-0oF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uc9-FX-fpm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uz4-Fo-Stq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uz4-Fo-Stq" secondAttribute="trailing" id="JMF-OI-Ary"/>
+                            <constraint firstItem="Tub-Et-0oF" firstAttribute="top" secondItem="uz4-Fo-Stq" secondAttribute="bottom" id="L0G-9n-yv3"/>
+                            <constraint firstItem="uz4-Fo-Stq" firstAttribute="top" secondItem="CO6-Fj-Hip" secondAttribute="bottom" id="WHd-UO-YDN"/>
+                            <constraint firstItem="uz4-Fo-Stq" firstAttribute="leading" secondItem="uc9-FX-fpm" secondAttribute="leading" id="eW2-Pj-6BM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Flq-w9-mK1"/>
+                    <connections>
+                        <outlet property="reviewTextView" destination="uz4-Fo-Stq" id="r4U-SM-i6E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNu-vS-otA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2471" y="43"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="1W4-BZ-6jC">
+            <objects>
+                <tableViewController id="pa7-Mb-1JV" customClass="TableViewController" customModule="ReviewScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a0Q-YX-0eH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="tta-PD-qd0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tta-PD-qd0" id="ivC-JA-78j">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="blc-lb-K0a">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="blc-lb-K0a" secondAttribute="trailing" id="1lk-K7-1rD"/>
+                                        <constraint firstAttribute="bottom" secondItem="blc-lb-K0a" secondAttribute="bottom" id="2Xd-RK-16z"/>
+                                        <constraint firstItem="blc-lb-K0a" firstAttribute="leading" secondItem="ivC-JA-78j" secondAttribute="leading" id="aKk-bJ-vud"/>
+                                        <constraint firstItem="blc-lb-K0a" firstAttribute="top" secondItem="ivC-JA-78j" secondAttribute="top" id="hK8-Rr-HpO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pa7-Mb-1JV" id="l7g-m6-drc"/>
+                            <outlet property="delegate" destination="pa7-Mb-1JV" id="LkQ-sO-tiu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hu-7s-ot6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3415" y="43"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lgt-yx-97S">
@@ -517,7 +616,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgi-Lk-nVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130.40000000000001" y="42.728635682158924"/>
+            <point key="canvasLocation" x="229" y="43"/>
         </scene>
     </scenes>
     <resources>

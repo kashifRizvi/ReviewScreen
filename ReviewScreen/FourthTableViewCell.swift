@@ -10,6 +10,9 @@ import UIKit
 
 class FourthTableViewCell: UITableViewCell {
 
+    @IBAction func willHireAgainAction(_ sender: UIButton) {
+        delegate?.willHireAgain(cell: self, isHirable: (sender.titleLabel?.text)!)
+    }
     var delegate: FourthCellProtocol?
     
     override func awakeFromNib() {

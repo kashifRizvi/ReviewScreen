@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol, SixthCellProtocol, SeventhCellprotocol {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol, SixthCellProtocol, SeventhCellProtocol {
+    
     @IBOutlet weak var tableView: UITableView!
     
     var sitter = ReviewSitter()
@@ -18,31 +18,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
         
-        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-     func numberOfSections(in tableView: UITableView) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 7
     }
     
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let row = indexPath.row
         
@@ -94,10 +93,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 0:
             return tableView.rowHeight
         case 1:
-//            if self.isSecondCellHidden{
-                return tableView.rowHeight
-//            }
-//            return tableView.rowHeight+50
+            //            if self.isSecondCellHidden{
+            return tableView.rowHeight
+            //            }
+        //            return tableView.rowHeight+50
         case 2:
             if self.isSecondCellHidden{
                 return 0
@@ -143,24 +142,72 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //MARK: - Second cell protocol methods
     
-    func interactionSelected(cell: SecondTableViewCell, methodName: String?) {
+    func interactionSelected(cell: SecondTableViewCell, methodName: String) {
         self.sitter.modeOfInteraction = methodName
+        if methodName == "Hired"{
+            self.isThirdCellHidden = false
+        }else{
+            self.isThirdCellHidden = true
+            self.sitter.willHireAgain = nil
+        }
         self.isSecondCellHidden = false
         let index = self.tableView.indexPath(for: cell)
         self.tableView.reloadRows(at: [index!], with: .fade)
-
+        
     }
     
     func interactionDeselected(cell: SecondTableViewCell) {
+        self.sitter.workFields.removeAll()
+        self.sitter.willHireAgain = nil
+        
         self.isSecondCellHidden = true
         self.isThirdCellHidden = true
         let index = self.tableView.indexPath(for: cell)
-//        print(index?.row)
+        print(index?.row)
         self.tableView.reloadRows(at: [index!], with: .automatic)
+        
     }
     
+    func updateWorkFields(cell: ThirdTableViewCell, methodName: String) {
+        self.sitter.workFields[methodName] = true
+        print(self.sitter.workFields)
+    }
     
+    func willHireAgain(cell: FourthTableViewCell, isHirable: String) {
+        if isHirable == "No" {
+            self.sitter.willHireAgain = false
+        }else{
+            self.sitter.willHireAgain = true
+        }
+    }
     
+    func isPunctual(cell: FifthTableViewCell, withValue: String) {
+        if withValue == "No" {
+            self.sitter.isPunctual = false
+        }else{
+            self.sitter.isPunctual = true
+        }
+    }
+    
+    func isDependable(cell: SixthTableViewCell, withValue: String) {
+        if withValue == "No" {
+            self.sitter.isPunctual = false
+        }else{
+            self.sitter.isPunctual = true
+        }
+    }
+    
+    func segueTo(cell: SeventhTableViewCell){
+        self.performSegue(withIdentifier: "toRemarksInput", sender: nil)
+        
+//        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "identifier") as! ReviewRemarksController
+//        
+//        self.navigationController?.pushViewController(vc, animated:true)
+//        let reviewScreen = ReviewRemarksController()
+//        reviewScreen.delegate = cell
+//        self.navigationController?.pushViewController(reviewScreen, animated: true)
+
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -196,14 +243,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//     let reviewScreen = segue.destination
+//        self.present(reviewScreen, animated: true, completion: nil)
+//    }
+ 
+    
 }

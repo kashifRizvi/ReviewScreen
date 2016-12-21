@@ -17,7 +17,7 @@ class ReviewSitter {
     var isPunctual : Bool?
     var isDependable : Bool?
     var remarks : String?
-    var workFields = [String:Bool]()
+    var workFields = [String : Bool]()
     var willHireAgain : Bool?
     var profileImage : Data?
     

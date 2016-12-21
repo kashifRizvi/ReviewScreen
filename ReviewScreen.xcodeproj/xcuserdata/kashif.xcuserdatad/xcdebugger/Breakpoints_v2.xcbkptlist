@@ -122,28 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReviewScreen/ViewController.swift"
-            timestampString = "503936742.321585"
+            timestampString = "504019151.318724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "tableView(_:heightForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ReviewScreen/ViewController.swift"
-            timestampString = "503937324.924861"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "interactionDeselected(cell:)"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "segueTo(cell:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
