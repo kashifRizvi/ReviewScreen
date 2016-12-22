@@ -26,7 +26,6 @@ class ReviewRemarksController: UIViewController, UINavigationControllerDelegate 
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         print("will Show view controller")
         delegate?.setTextViewText(withText: self.reviewTextView.text)
-        
     }
     
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
