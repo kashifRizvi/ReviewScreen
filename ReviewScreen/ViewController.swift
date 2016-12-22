@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol, SixthCellProtocol, SeventhCellProtocol {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FirstCellProtocol, SecondCellProtocol, ThirdCellProtocol, FourthCellProtocol, FifthCellProtocol, SixthCellProtocol, SeventhCellProtocol, UINavigationBarDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -198,7 +198,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func segueTo(cell: SeventhTableViewCell){
-        self.performSegue(withIdentifier: "toRemarksInput", sender: nil)
+        let review = self.storyboard?.instantiateViewController(withIdentifier: "ReviewScreenn") as! ReviewRemarksController
+        review.delegate = cell
+        
+        self.navigationController?.pushViewController(review, animated: true)
         
 //        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "identifier") as! ReviewRemarksController
 //        
@@ -207,6 +210,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        reviewScreen.delegate = cell
 //        self.navigationController?.pushViewController(reviewScreen, animated: true)
 
+    }
+    
+    func resignKeyboard(cell: SeventhTableViewCell) {
+        self.resignFirstResponder()
     }
     /*
      // Override to support conditional editing of the table view.

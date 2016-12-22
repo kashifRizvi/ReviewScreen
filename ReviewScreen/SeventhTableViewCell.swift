@@ -17,13 +17,14 @@ class SeventhTableViewCell: UITableViewCell, textViewProtocol, UITextViewDelegat
     override func awakeFromNib() {
         super.awakeFromNib()
         textViewOutlet.text = "ascjhcbakewjhc kjaec nbaw ck askcbkjwhebcjhaebljrhebfjhbearjhvgeljvbkajshncvlkajshlkcnrwi nclkwan ofinwlkjcrn3oialv kj"
-        NotificationCenter.default.addObserver(self, selector: #selector(SeventhTableViewCell.segueToRemarksScreen), name: NSNotification.Name.UITextViewTextDidBeginEditing, object: self)
+//        NotificationCenter.default.addObserver(self, selector: #selector(SeventhTableViewCell.segueToRemarksScreen), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SeventhTableViewCell.segueToRemarksScreen), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
 //        self.textViewOutlet.delegate = self
     }
     
-//    func textViewDidBeginEditing(_ textView: UITextView){
-//        delegate?.segueTo(cell: self)
-//    }
+    func textViewDidBeginEditing(_ textView: UITextView){
+        delegate?.segueTo(cell: self)
+    }
     
     func segueToRemarksScreen(){
         delegate?.segueTo(cell: self)
@@ -35,8 +36,14 @@ class SeventhTableViewCell: UITableViewCell, textViewProtocol, UITextViewDelegat
         // Configure the view for the selected state
     }
     
-    func setTextViewText(withText: String?) {
+    func setTextViewText(withText: String) {
         self.textViewOutlet.text = withText
+        
+//        self.resignFirstResponder()
+        
+        delegate?.resignKeyboard(cell: self)
+        
+        
     }
 
 }

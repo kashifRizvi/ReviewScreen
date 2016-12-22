@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReviewRemarksController: UIViewController {
+class ReviewRemarksController: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var reviewTextView: UITextView!
     
@@ -17,7 +17,17 @@ class ReviewRemarksController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        print("will Show view controller")
+        delegate?.setTextViewText(withText: self.reviewTextView.text)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        print("DID show view controller")
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +35,9 @@ class ReviewRemarksController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        print("View will disappear")
+    }
 
     /*
     // MARK: - Navigation

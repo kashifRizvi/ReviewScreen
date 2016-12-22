@@ -39,8 +39,9 @@ protocol SixthCellProtocol {
 
 protocol SeventhCellProtocol {
     func segueTo(cell: SeventhTableViewCell)
+    func resignKeyboard(cell: SeventhTableViewCell)
 }
 
 protocol textViewProtocol {
-    func setTextViewText(withText: String?)
+    func setTextViewText(withText: String)
 }
