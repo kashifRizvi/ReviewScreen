@@ -163,7 +163,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.isSecondCellHidden = true
         self.isThirdCellHidden = true
         let index = self.tableView.indexPath(for: cell)
-        print(index?.row)
+        print(index?.row as Any)
         self.tableView.reloadRows(at: [index!], with: .automatic)
         
     }
@@ -200,6 +200,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func segueTo(cell: SeventhTableViewCell){
         let review = self.storyboard?.instantiateViewController(withIdentifier: "ReviewScreenn") as! ReviewRemarksController
         review.delegate = cell
+        print(cell.textViewOutlet.text)
+        review.holdText = cell.textViewOutlet.text
         
         self.navigationController?.pushViewController(review, animated: true)
         

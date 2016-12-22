@@ -14,12 +14,13 @@ class SeventhTableViewCell: UITableViewCell, textViewProtocol, UITextViewDelegat
     
     @IBOutlet weak var textViewOutlet: UITextView!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         textViewOutlet.text = "ascjhcbakewjhc kjaec nbaw ck askcbkjwhebcjhaebljrhebfjhbearjhvgeljvbkajshncvlkajshlkcnrwi nclkwan ofinwlkjcrn3oialv kj"
 //        NotificationCenter.default.addObserver(self, selector: #selector(SeventhTableViewCell.segueToRemarksScreen), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(SeventhTableViewCell.segueToRemarksScreen), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-//        self.textViewOutlet.delegate = self
+//        NotificationCenter.default.addObserver(self, selector: #selector(SeventhTableViewCell.segueToRemarksScreen), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        self.textViewOutlet.delegate = self
     }
     
     func textViewDidBeginEditing(_ textView: UITextView){
@@ -39,11 +40,10 @@ class SeventhTableViewCell: UITableViewCell, textViewProtocol, UITextViewDelegat
     func setTextViewText(withText: String) {
         self.textViewOutlet.text = withText
         
-//        self.resignFirstResponder()
+        self.textViewOutlet.resignFirstResponder()
         
         delegate?.resignKeyboard(cell: self)
         
         
     }
-
 }
